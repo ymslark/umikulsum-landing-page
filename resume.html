@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Personal - Start Bootstrap Template</title>
+    <title>Riwayat</title>
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
@@ -13,12 +13,15 @@
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="assets/css/Features-Cards-icons.css">
     <link rel="stylesheet" href="assets/css/Whatsapp-flotating-button.css">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
 </head>
 
 <body class="bg-light d-flex h-100 flex-column">
     <main class="flex-shrink-0">
         <nav class="bg-white navbar navbar-expand-lg py-3 navbar-light">
-            <div class="container"><a class="navbar-brand" href="index.html"><span class="fw-bolder text-primary">Start Bootstrap</span></a><button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" type="button" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="container"><a class="navbar-brand" href="index.html"><span class="fw-bolder text-primary">Umi Kulsum & Partners <i class="fas fa-scale-balanced"></i></span></a><button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" type="button" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav small fw-bolder ms-auto mb-2 mb-lg-0">
                         <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
@@ -32,23 +35,26 @@
         </nav>
         <div class="container px-5 my-5">
             <div class="text-center mb-5">
-                <h1 class="display-5 fw-bolder mb-0"><span class="d-inline text-gradient">Resume</span></h1>
+                <h1 class="display-5 fw-bolder mb-0"><span class="d-inline text-gradient">Pengalaman & Pendidikan</span></h1>
             </div>
             <div class="row gx-5 justify-content-center">
                 <div class="col-lg-11 col-xl-9 col-xxl-8">
                     <section>
                         <div class="d-flex justify-content-between align-items-center mb-4">
-                            <h2 class="fw-bolder text-primary mb-0">Experience</h2><a class="btn btn-primary px-4 py-3" role="button" href="#!"><div class="d-inline-block bi bi-download me-2"></div> Download Resume </a>
+                            <h2 class="fw-bolder text-primary mb-0">Pengalaman</h2>
                         </div>
-                        <div class="card rounded-4 border-0 shadow mb-5">
+                        <div id="wadah-pengalaman">
+
+                        </div>
+                        <!-- <div class="card rounded-4 border-0 shadow mb-5">
                             <div class="card-body p-5">
                                 <div class="row gx-5 align-items-center">
                                     <div class="col text-center text-lg-start mb-4 mb-lg-0">
                                         <div class="bg-light rounded-4 p-4">
-                                            <div class="fw-bolder text-primary mb-2"><span>2019 - Present</span></div>
-                                            <div class="small fw-bolder"><span>Web Developer</span></div>
-                                            <div class="small text-muted"><span>Stark Industries</span></div>
-                                            <div class="small text-muted"><span>Los Angeles, CA</span></div>
+                                            <div class="fw-bolder text-primary mb-2 fs-3"><span>2019 - 2020</span></div>
+                                            <div class="fw-bolder fs-4"><span>Bendahara Umum</span></div>
+                                            <div class="text-muted fs-5"><span>Himpunan Mahasiswa Fakultas Syariah dan Hukum</span></div>
+                                            <div class="text-muted fs-5 fw-bold"><span>UIN Sunan Gunung Djati</span></div>
                                         </div>
                                     </div>
                                     <div class="col-lg-8">
@@ -58,6 +64,72 @@
                             </div>
                         </div>
                         <div class="card rounded-4 border-0 shadow mb-5">
+                            <div class="card-body p-5">
+                                <div class="row gx-5 align-items-center">
+                                    <div class="col text-center text-lg-start mb-4 mb-lg-0">
+                                        <div class="bg-light rounded-4 p-4">
+                                            <div class="fw-bolder text-primary mb-2 fs-3"><span>2019 - 2020</span></div>
+                                            <div class="small fw-bolder fs-4"><span>Bendahara Umum</span></div>
+                                            <div class="small text-muted fs-5"><span>Himpunan Mahasiswa Fakultas Syariah dan Hukum</span></div>
+                                            <div class="small text-muted fs-5 fw-bold"><span>UIN Sunan Gunung Djati</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card rounded-4 border-0 shadow mb-5">
+                            <div class="card-body p-5">
+                                <div class="row gx-5 align-items-center">
+                                    <div class="col text-center text-lg-start mb-4 mb-lg-0">
+                                        <div class="bg-light rounded-4 p-4">
+                                            <div class="fw-bolder text-primary mb-2"><span>2018 - 2019</span></div>
+                                            <div class="small fw-bolder"><span>Bendahara Umum</span></div>
+                                            <div class="small text-muted"><span>UKM Tadjimalela</span></div>
+                                            <div class="small text-muted"><span>Komisariat UIN Sunan Gunung Djati</span></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-8">
+                                        <div><span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus laudantium, voluptatem quis repellendus eaque sit animi illo ipsam amet officiis corporis sed aliquam non voluptate corrupti excepturi maxime porro fuga.</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card rounded-4 border-0 shadow mb-5">
+                            <div class="card-body p-5">
+                                <div class="row gx-5 align-items-center">
+                                    <div class="col text-center text-lg-start mb-4 mb-lg-0">
+                                        <div class="bg-light rounded-4 p-4">
+                                            <div class="fw-bolder text-primary mb-2"><span>2019 - 2020</span></div>
+                                            <div class="small fw-bolder"><span>Bendahara Umum</span></div>
+                                            <div class="small text-muted"><span>Himpunan Mahasiswa Fakultas Syariah dan Hukum</span></div>
+                                            <div class="small text-muted"><span>UIN Sunan Gunung Djati</span></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-8">
+                                        <div><span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus laudantium, voluptatem quis repellendus eaque sit animi illo ipsam amet officiis corporis sed aliquam non voluptate corrupti excepturi maxime porro fuga.</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card rounded-4 border-0 shadow mb-5">
+                            <div class="card-body p-5">
+                                <div class="row gx-5 align-items-center">
+                                    <div class="col text-center text-lg-start mb-4 mb-lg-0">
+                                        <div class="bg-light rounded-4 p-4">
+                                            <div class="fw-bolder text-primary mb-2"><span>2019 - 2020</span></div>
+                                            <div class="small fw-bolder"><span>Bendahara Umum</span></div>
+                                            <div class="small text-muted"><span>Himpunan Mahasiswa Fakultas Syariah dan Hukum</span></div>
+                                            <div class="small text-muted"><span>UIN Sunan Gunung Djati</span></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-8">
+                                        <div><span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus laudantium, voluptatem quis repellendus eaque sit animi illo ipsam amet officiis corporis sed aliquam non voluptate corrupti excepturi maxime porro fuga.</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> -->
+
+                        <!-- <div class="card rounded-4 border-0 shadow mb-5">
                             <div class="card-body p-5">
                                 <div class="row gx-5 align-items-center">
                                     <div class="col text-center text-lg-start mb-4 mb-lg-0">
@@ -73,29 +145,29 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                     </section>
                     <section>
-                        <h2 class="fw-bolder text-secondary mb-4">Education</h2>
+                        <h2 class="fw-bolder text-secondary mb-4">Pendidikan</h2>
                         <div class="card rounded-4 border-0 shadow mb-5">
                             <div class="card-body p-5">
                                 <div class="row gx-5 align-items-center">
                                     <div class="col text-center text-lg-start mb-4 mb-lg-0">
                                         <div class="bg-light rounded-4 p-4">
-                                            <div class="fw-bolder text-secondary mb-2"><span>2015 - 2017</span></div>
+                                            <div class="fw-bolder text-secondary mb-2"><span>2016 - 2020</span></div>
                                             <div class="mb-2">
-                                                <div class="small fw-bolder"><span>Barnett College</span></div>
-                                                <div class="small text-muted"><span>Fairfield, NY</span></div>
+                                                <div class="small fw-bolder"><span>UIN Sunan Gunung Djati</span></div>
+                                                <div class="small text-muted"><span>Bandung, Jawa Barat</span></div>
                                             </div>
                                             <div class="fst-italic">
-                                                <div class="small text-muted"><span>Master's</span></div>
-                                                <div class="small text-muted"><span>Web Development</span></div>
+                                                <div class="small text-muted"><span>S1 Jurusan Hukum</span></div>
+                                                <!-- <div class="small text-muted"><span>Hukum</span></div> -->
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-lg-8">
+                                    <!-- <div class="col-lg-8">
                                         <div><span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus laudantium, voluptatem quis repellendus eaque sit animi illo ipsam amet officiis corporis sed aliquam non voluptate corrupti excepturi maxime porro fuga.</span></div>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
                         </div>
@@ -104,26 +176,26 @@
                                 <div class="row gx-5 align-items-center">
                                     <div class="col text-center text-lg-start mb-4 mb-lg-0">
                                         <div class="bg-light rounded-4 p-4">
-                                            <div class="fw-bolder text-secondary mb-2"><span>2011 - 2015</span></div>
+                                            <div class="fw-bolder text-secondary mb-2"><span>2013 - 2016</span></div>
                                             <div class="mb-2">
-                                                <div class="small fw-bolder"><span>ULA</span></div>
-                                                <div class="small text-muted"><span>Los Angeles, CA</span></div>
+                                                <div class="fs-4 fw-bolder"><span>MA Daruttaqwien</span></div>
+                                                <div class="fs-5 text-muted"><span>Bekasi, Jawa Barat</span></div>
                                             </div>
                                             <div class="fst-italic">
-                                                <div class="small text-muted"><span>Undergraduate</span></div>
-                                                <div class="small text-muted"><span>Computer Science</span></div>
+                                                <div class="fs-6 text-muted"><span>Madrasah 'Aliyah</span></div>
+                                                <!-- <div class="small text-muted"><span>Computer Science</span></div> -->
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-lg-8">
+                                    <!-- <div class="col-lg-8">
                                         <div><span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus laudantium, voluptatem quis repellendus eaque sit animi illo ipsam amet officiis corporis sed aliquam non voluptate corrupti excepturi maxime porro fuga.</span></div>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
                         </div>
                     </section>
                     <div class="pb-5"></div>
-                    <section>
+                    <!-- <section>
                         <div class="card rounded-4 border-0 shadow mb-5">
                             <div class="card-body p-5">
                                 <div class="mb-5">
@@ -188,7 +260,7 @@
                                 </div>
                             </div>
                         </div>
-                    </section>
+                    </section> -->
                 </div>
             </div>
         </div>
@@ -205,7 +277,84 @@
     </footer>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js"
+        integrity="sha512-0X0pG62hJNN3vP6fQtbDNRsTA70vsK1tnE+bBZ5qTqL0U8nyJlcQFV3ayhtq/Y5cHIzoHmr18bODsPwhj/KgkQ=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+    ></script>
+    <script>
+        AOS.init()
+    </script>
     <script src="assets/js/scripts.js"></script>
+    <script>
+        // 1. Data pengalaman organisasi yang sudah disaring & dirapikan
+        const dataOrganisasi = [
+            {
+                tahun: "2019 - 2020",
+                jabatan: "Bendahara Umum",
+                lembaga: "Himpunan Mahasiswa Jurusan Fakultas Syariah dan Hukum",
+                universitas: "UIN Sunan Gunung Djati Bandung",
+                deskripsi: "Mengelola akuntabilitas keuangan, penyusunan anggaran strategis, dan transparansi dana operasional organisasi untuk mendukung berbagai program kerja kemahasiswaan tingkat fakultas."
+            },
+            {
+                tahun: "2019 - 2020",
+                jabatan: "Pengurus Cabang",
+                lembaga: "Kohati Himpunan Mahasiswa Islam (HMI)",
+                universitas: "Cabang Kabupaten Bandung",
+                deskripsi: "Aktif dalam merumuskan kebijakan internal organisasi, menginisiasi forum kajian hukum/sosial, serta berfokus pada pengembangan kapasitas kepemimpinan bagi kader perempuan."
+            },
+            {
+                tahun: "2018 - 2019",
+                jabatan: "Ketua Bidang Kewirausahaan",
+                lembaga: "Himpunan Mahasiswa Jurusan Ahwal Syakhsiyah",
+                universitas: "UIN Sunan Gunung Djati Bandung",
+                deskripsi: "Memimpin perencanaan program ekonomi kreatif, mengelola unit usaha mandiri organisasi, serta melatih kemampuan negosiasi dan komersial anggota yang relevan dengan aspek hukum bisnis."
+            },
+            {
+                tahun: "2018 - 2019",
+                jabatan: "Anggota Bidang P3A",
+                lembaga: "HMI Komisariat Sains & Teknologi",
+                universitas: "Cabang Kabupaten Bandung",
+                deskripsi: "Berkontribusi dalam riset ilmiah, pembinaan nalar kritis kader, serta pengorganisasian forum diskusi akademis terkait isu-isu hukum dan sosial kemasyarakatan."
+            }
+        ];
+
+        // 2. Ambil elemen wadah penampung
+        const wadah = document.getElementById('wadah-pengalaman');
+
+        // 3. Variabel untuk menampung seluruh string HTML
+        let listHTML = '';
+
+        // 4. Lakukan looping data menggunakan forEach
+        dataOrganisasi.forEach(item => {
+            // Gabungkan struktur HTML Bootstrap bawaan template kamu
+            listHTML += `
+                <div class="card rounded-4 border-0 shadow mb-5">
+                    <div class="card-body p-5">
+                        <div class="row gx-5 align-items-center">
+                            <div class="col-12 col-lg-4 text-center text-lg-start mb-4 mb-lg-0">
+                                <div class="bg-light rounded-4 p-4">
+                                    <div class="fw-bolder text-primary mb-2 fs-4"><span>${item.tahun}</span></div>
+                                    <div class="fw-bolder fs-5"><span>${item.jabatan}</span></div>
+                                    <div class="text-muted fs-6"><span>${item.lembaga}</span></div>
+                                    <div class="text-muted fs-6 fw-bold"><span>${item.universitas}</span></div>
+                                </div>
+                            </div>
+                            <div class="col-lg-8">
+                                <div><span>${item.deskripsi}</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+        });
+
+        // 5. Render atau cetak semua kartu ke dalam HTML
+        wadah.innerHTML = listHTML;
+    </script>
+    <!-- <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script> -->
 </body>
 
 </html>

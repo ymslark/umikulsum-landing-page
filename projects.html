@@ -13,6 +13,14 @@
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="assets/css/Features-Cards-icons.css">
     <link rel="stylesheet" href="assets/css/Whatsapp-flotating-button.css">
+        <!-- Bagian CSS: Warna Label/Badge Bidang Hukum -->
+    <style>
+        .badge-keluarga { background-color: #0d6efd; color: white; } /* Biru */
+        .badge-sipil { background-color: #6c757d; color: white; }    /* Abu-abu */
+        .badge-perdata { background-color: #198754; color: white; }  /* Hijau */
+        .badge-pidana { background-color: #dc3545; color: white; }   /* Merah */
+    </style>
+
 </head>
 
 <body class="bg-light d-flex h-100 flex-column">
@@ -37,7 +45,7 @@
                     <h1 class="display-5 fw-bolder mb-0"><span class="d-inline text-gradient">Rekam Jejak</span></h1>
                 </div>
                 <div class="row gx-5 justify-content-center">
-                    <div class="col-lg-11 col-xl-9 col-xxl-8">
+                    <div class="col-lg-11 col-xl-9 col-xxl-8" id="riwayat-kasus">
                         <div class="card rounded-4 border-0 shadow overflow-hidden mb-5">
                             <div class="card-body p-0">
                                 <div class="d-flex align-items-center">
@@ -84,7 +92,180 @@
     </footer>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/scripts.js"></script>
+    <script src="assets/js/scripts.js"></script>\
+
+
+<!-- Bagian JavaScript: Data dan Render Otomatis -->
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        // Data Riwayat Kasus menyatu langsung di sini
+        const dataRiwayat = [
+            {
+                "kategori": "Hukum Keluarga",
+                "id_kategori": "keluarga",
+                "perkara": "Cerai Talak",
+                "klien": "Bapak A******",
+                "deskripsi": "Mendampingi suami dalam pengurusan permohonan cerai talak di Pengadilan Agama, memastikan seluruh hak-hak hukum berjalan sesuai prosedur yang berlaku."
+            },
+            {
+                "kategori": "Hukum Pidana",
+                "id_kategori": "pidana",
+                "perkara": "Pendampingan Kasus Pidana Anak",
+                "klien": "Anak J***** (diwakili orang tua)",
+                "deskripsi": "Memberikan perlindungan hukum khusus dan pendampingan bagi anak yang berhadapan dengan hukum dengan mengutamakan asas kepentingan terbaik bagi anak."
+            },
+            {
+                "kategori": "Hukum Keluarga",
+                "id_kategori": "keluarga",
+                "perkara": "Permohonan Perwalian Anak",
+                "klien": "Ibu D****",
+                "deskripsi": "Mengawal proses permohonan penetapan wali bagi anak di bawah umur secara efisien untuk menjamin kepastian hukum masa depan anak."
+            },
+            {
+                "kategori": "Dokumen Sipil",
+                "id_kategori": "sipil",
+                "perkara": "Permohonan Persamaan Identitas",
+                "klien": "Ibu W***",
+                "deskripsi": "Menyelesaikan permasalahan perbedaan penulisan nama atau identitas klien pada dokumen yang berbeda lewat jalur hukum yang legal."
+            },            
+ 
+            {
+                "kategori": "Hukum Keluarga",
+                "id_kategori": "keluarga",
+                "perkara": "Pengurusan Asal-Usul Anak",
+                "klien": "Ibu F*****",
+                "deskripsi": "Mengajukan permohonan pengesahan asal-usul anak di pengadilan demi kejelasan status hukum dan dokumen kependudukan anak."
+            },
+            {
+                "kategori": "Hukum Keluarga",
+                "id_kategori": "keluarga",
+                "perkara": "Sengketa Harta Bersama / Gono-Gini",
+                "klien": "Bapak H******",
+                "deskripsi": "Memfasilitasi mediasi dan kuasa hukum dalam pembagian aset bersama pasca-perceraian secara adil dan berkekuatan hukum tetap."
+            },
+            {
+                "kategori": "Hukum Keluarga",
+                "id_kategori": "keluarga",
+                "perkara": "Permohonan Izin Poligami",
+                "klien": "Bapak B******",
+                "deskripsi": "Mendampingi suami dalam melengkapi syarat administratif dan persidangan permohonan izin poligami sesuai dengan ketentuan undang-undang perkawinan."
+            },
+            {
+                "kategori": "Dokumen Sipil",
+                "id_kategori": "sipil",
+                "perkara": "Permohonan Perbaikan Identitas",
+                "klien": "Ibu N******",
+                "deskripsi": "Mengurus perubahan dan perbaikan kesalahan data identitas diri pada dokumen resmi melalui penetapan pengadilan yang sah."
+            },
+           {
+                "kategori": "Hukum Keluarga",
+                "id_kategori": "keluarga",
+                "perkara": "Isbat Nikah",
+                "klien": "Bapak M******* & Ibu S****",
+                "deskripsi": "Membantu pasangan suami istri dalam pengesahan pernikahan yang belum tercatat agar mendapatkan legalitas hukum penuh dari negara."
+            },
+            {
+                "kategori": "Dokumen Sipil",
+                "id_kategori": "sipil",
+                "perkara": "Permohonan Perbaikan Akta Kelahiran",
+                "klien": "Bapak T***",
+                "deskripsi": "Membantu perbaikan kekeliruan redaksional pada akta kelahiran agar selaras dengan dokumen kependudukan lainnya."
+            },
+            {
+                "kategori": "Hukum Perdata",
+                "id_kategori": "perdata",
+                "perkara": "Permohonan Izin Menjual/Menjaminkan",
+                "klien": "Bapak K*****",
+                "deskripsi": "Mengurus izin pengadilan untuk melakukan tindakan hukum atas aset bersama atau aset anak di bawah umur (menjual/menjaminkan agunan)."
+            },
+            {
+                "kategori": "Hukum Perdata",
+                "id_kategori": "perdata",
+                "perkara": "Gugatan Pengesahan Jual-Beli",
+                "klien": "Bapak I*****",
+                "deskripsi": "Mewakili pembeli dalam mengajukan gugatan pengesahan transaksi jual-beli aset/tanah yang sebelumnya mengalami kendala administratif atau sengketa."
+            },
+            {
+                "kategori": "Hukum Perdata",
+                "id_kategori": "perdata",
+                "perkara": "Gugatan Perbuatan Melawan Hukum (PMH)",
+                "klien": "Bapak G*****",
+                "deskripsi": "Bertindak sebagai kuasa hukum dalam menuntut keadilan dan ganti rugi atas tindakan pihak lain yang merugikan hak-hak klien."
+            },
+            {
+                "kategori": "Hukum Pidana",
+                "id_kategori": "pidana",
+                "perkara": "Pengurusan Restitusi Korban",
+                "klien": "Ibu Y****",
+                "deskripsi": "Mengawal permohonan ganti kerugian (restitusi) bagi korban tindak pidana guna memulihkan hak-hak materiil maupun imateriil klien yang dirugikan."
+            },
+            {
+                "kategori": "Dokumen Sipil",
+                "id_kategori": "sipil",
+                "perkara": "Permohonan Penetapan Kematian",
+                "klien": "Ibu E***",
+                "deskripsi": "Membantu pengurusan penetapan kematian dari pengadilan bagi seseorang yang telah lama hilang atau meninggal demi keperluan hukum ahli waris."
+            },
+            {
+                "kategori": "Dokumen Sipil",
+                "id_kategori": "sipil",
+                "perkara": "Permohonan Perubahan Nama di Akta Kelahiran",
+                "klien": "Ibu L********",
+                "deskripsi": "Mengawal proses persidangan permohonan penggantian atau penyesuaian nama pada akta kelahiran anak/dewasa."
+            },
+            {
+                "kategori": "Hukum Pidana",
+                "id_kategori": "pidana",
+                "perkara": "Pembelaan Pidana Dewasa",
+                "klien": "Bapak V*****",
+                "deskripsi": "Bertindak sebagai penasihat hukum di persidangan pidana untuk memastikan klien mendapatkan hak pembelaan yang adil dan sesuai koridor hukum (due process of law)."
+            },
+            {
+                "kategori": "Hukum Keluarga",
+                "id_kategori": "keluarga",
+                "perkara": "Cerai Gugat",
+                "klien": "Ibu R*******",
+                "deskripsi": "Mewakili istri dalam mengajukan gugatan perceraian dengan fokus pada perlindungan hak-hak perempuan pasca-perceraian."
+            },
+            {
+                "kategori": "Hukum Pidana",
+                "id_kategori": "pidana",
+                "perkara": "Pendampingan di Kantor Polisi",
+                "klien": "Bapak O***",
+                "deskripsi": "Mendampingi klien sejak tahap pemeriksaan awal (sebagai saksi/terlapor) di kepolisian guna mencegah potensi pelanggaran hak dan intimidasi."
+            },
+        ];
+
+        const container = document.getElementById('riwayat-kasus');
+        container.innerHTML = ''; // Bersihkan kontainer
+
+        // Lakukan perulangan untuk mencetak kartu
+        dataRiwayat.forEach(item => {
+            const card = document.createElement('div');
+            card.className = "card rounded-4 border-0 shadow overflow-hidden mb-5";
+            
+            card.innerHTML = `
+                <div class="card-body p-0">
+                    <div class="d-flex align-items-center">
+                        <div class="p-5 w-100">
+                            <div class="d-flex flex-wrap align-items-center gap-2 mb-2">
+                                <h4 class="fw-bolder m-0">${item.perkara}</h4>
+                                <span class="badge rounded-pill badge-${item.id_kategori} fs-7">${item.kategori}</span>
+                            </div>
+                            <h5 class="fs-6 fw-bolder text-muted mb-3">Klien: ${item.klien}</h5>
+                            <p class="mb-0 text-secondary text-black">${item.deskripsi}</p>
+                        </div>
+                    </div>
+                </div>
+            `;
+            
+            container.appendChild(card);
+        });
+    });
+    </script>
+
+
+    <!-- <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script> -->
 </body>
 
 </html>
